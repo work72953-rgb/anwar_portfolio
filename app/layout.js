@@ -25,7 +25,7 @@ const changa = Changa({
 });
 
 export const metadata = {
-  title: "Content Creator Portfolio",
+  title: "Anwar Albqami Portfolio",
   description: "Personal Content Creator Portfolio",
   icons: [{ rel: "icon", url: "icon.ico" }],
 };
