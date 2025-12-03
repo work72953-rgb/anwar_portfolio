@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="relative my-5 py-5 w-full rounded-lg">
+    <div className="relative my-5 py-5 w-full rounded-lg overflow-hidden">
 
       {/* ---------------- Background ---------------- */}
       <Image
