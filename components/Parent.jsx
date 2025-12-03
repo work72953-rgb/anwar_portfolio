@@ -12,7 +12,7 @@ export default function Parent() {
     <div className='container m-auto  p-[var(--main-padding)] flex flex-col gap-2'>
  
       <Skills/>
-      <Experiences/>
+      {/* <Experiences/> */}
       <Education/>
       <Certificates/>
       <Memberships/>
