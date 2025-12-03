@@ -35,7 +35,7 @@ export default function About() {
           "
         >
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="my pic"
             width={300}
             height={300}

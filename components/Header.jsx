@@ -15,7 +15,7 @@ export default function Header() {
              `}
         >
           <Image
-            src="/logo.png"
+            src="/header_logo.png"
             alt="my pic"
             width={70}
             height={70}
