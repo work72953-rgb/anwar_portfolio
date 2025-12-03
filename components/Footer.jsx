@@ -34,7 +34,7 @@ export default function Footer() {
             width={30}
             height={30}
           />
-          أنوار البقمي
+          أنوار عبدالله
         </a>
         <a
   href="mailto:Anwar-595@hotmail.com"
