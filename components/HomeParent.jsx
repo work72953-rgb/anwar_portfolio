@@ -11,7 +11,7 @@ export default function HomeParent() {
       <About/>
       {/* <Articles/> */}
       <Services/>
-      <Video/>
+      {/* <Video/> */}
       <MyWorks/>
     </div>
   )

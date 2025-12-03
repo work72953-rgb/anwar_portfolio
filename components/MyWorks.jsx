@@ -3,55 +3,111 @@ import Image from "next/image";
 const projects = [
   {
     image: "proj1.webp",
-    title: "كتابة المقالات التقنية",
-    description: "كتابة محتوى عالي الجودة في مجال التكنولوجيا والبرمجة.",
-  },
-  {
-    image: "proj2.webp",
-    title: "التسويق الرقمي",
-    description: "إنشاء محتوى إبداعي للتسويق عبر منصات التواصل الاجتماعي.",
-  },
-  {
-    image: "proj3.webp",
-    title: "تحرير المدونات",
-    description: "تحرير ونشر مقالات مدونات متنوعة لجذب القراء.",
-  },
-  {
-    image: "proj4.webp",
-    title: "كتابة محتوى تسويقي",
-    description: "كتابة نصوص تسويقية جذابة لزيادة المبيعات.",
+    title: "لحظة تنفس 🎥 ",
+    description: `ابدأ أسبوعك بنَفَس عميق…
+مو علشان تغيّر العالم،
+لكن علشان تقدر تعيشه بهدوء أكثر. 🌿
+`,
+    hashtags: ["يوغا", "بداية أسبوع", "توازن"],
+    quote:
+      "مو كل حركه يوغا تبي مرونة… بعض الحركات تبي “تمرنا وتعيش اللحظة ” فقط 💭",
+    quote_hash: "يوغا بمزاج",
+    news: [
+      {
+        title: "عاجل📢",
+        txt: `: تم رصد شخص بدأ أسبوعه بنفس عميق بدل كوب قهوة ☕😌
+يُتوقع انخفاض نسبة التوتر وارتفاع طاقة السلام الداخلي خلال الساعات القادمة.
+`,
+      },
+    ],
   },
 ];
 export default function MyWorks() {
   return (
     <div className=" bg-gray-100 py-10 px-5">
       <h1 className="text-3xl font-bold text-center mb-10">أعمالي</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex justify-center items-center gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
+            className={`bg-white rounded-xl shadow-lg overflow-hidden flex flex-col gap-5
+              p-5
+              `}
           >
-            <div className="relative w-full h-48">
-              <Image
-                src={`/${project.image}`}
-                alt={project.title}
-                fill
-                className="object-cover brightness-80"
-              />
-            </div>
-            <div className="p-5 flex flex-col flex-1">
-              <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-              <p className="text-gray-600 flex-1">{project.description}</p>
-            </div>
-            <a
-              href="http://"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`text-center m-5 text-xl font-semibold text-blue-500`}
+            <div
+              className={`card_container flex flex-col md:flex-row justify-between gap-5
+              
+              rounded-xl
+               w-full p-3 lg:w-[850px]
+              `}
             >
-              انقر للاطلاع على المشروع
-            </a>
+              <div
+                className={`card1_txt w-full md:w-[400px]
+                flex flex-col gap-5
+                `}
+              >
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className={`tags flex flex-wrap items-center gap-3`}>
+                  {project.hashtags.map((t, idx) => (
+                    <a
+                      href=""
+                      className={`px-3 py-1 bg-gray-200 rounded-xl`}
+                      key={idx}
+                    >
+                      #{t}
+                    </a>
+                  ))}
+                </div>
+              </div>
+              {/* ------------------------ */}
+              <div
+                className={`card1 
+              flex
+              `}
+              >
+                {/* video */}
+                <div
+                  className={`relative w-full h-48 md:w-[350px] bg-amber-200 rounded-xl overflow-hidden`}
+                >
+                  <Image
+                    src={`/img1.png`}
+                    alt={""}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* ---------------------box2---------------------------------- */}
+            <div
+              className={`card2 flex justify-center gap-5  
+               w-full p-3 lg:w-[850px] rounded-xl
+               flex-col md:flex-row
+              `}
+            >
+              <div
+                className={`flex-1/2 p-5 rounded-xl h-[200px] bg-[#cdccca40]`}
+              >
+                {projects.map((q, idx) => (
+                  <div key={idx}>
+                    <p>{q.quote}</p>#<a href="">{q.quote_hash}</a>
+                  </div>
+                ))}
+              </div>
+              <div
+                className={`flex-1/2 p-5 rounded-xl h-[200px] bg-[#cdccca40]`}
+              >
+                <div>
+                  {project.news.map((n, idx) => (
+                    <div key={idx}>
+                      <h2>{n.title}</h2>
+                      <p>{n.txt}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>

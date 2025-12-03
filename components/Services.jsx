@@ -31,7 +31,7 @@ export default function Services() {
      {
 		content.map((c,idx)=>(
 			 <ul key={idx} className="list-disc mr-5 my-2">
-        <li>{c}</li>
+        <li className="text-xl">{c}</li>
       </ul>
 		))
 	 }
@@ -39,7 +39,7 @@ export default function Services() {
       {
 		services.map((s,idx)=>(
 			 <ul key={idx} className="list-disc mr-5 my-2">
-        <li>{s}</li>
+        <li className="text-xl">{s}</li>
       </ul>
 		))
 	 }
