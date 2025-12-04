@@ -9,7 +9,7 @@ import Achievements from './Achievements'
 
 export default function Parent() {
   return (
-    <div className='container m-auto  p-[var(--main-padding)] flex flex-col gap-2'>
+    <div className='container m-auto  p-(--main-padding) flex flex-col gap-2'>
  
       <Skills/>
       {/* <Experiences/> */}
