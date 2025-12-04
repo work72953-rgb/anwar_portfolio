@@ -1,7 +1,7 @@
 import Image from "next/image";
 const projects = [
   {
-    img: "",
+    img: "inst2.png",
     title: "كتابة محتوى حساب سامية السناني",
     description: `تحس أنك رجعت للدنيا… لكن مو نفس الناس؟
 ترجع للأماكن القديمة… وما يعود لك نفس الشعور؟
