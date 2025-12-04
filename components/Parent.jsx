@@ -13,10 +13,10 @@ export default function Parent() {
  
       <Skills/>
       {/* <Experiences/> */}
-      {/* <Education/> */}
+      <Education/>
       <Certificates/>
       <Memberships/>
-      <Achievements/>
+      {/* <Achievements/> */}
  
     </div>
   )
