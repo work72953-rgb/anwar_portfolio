@@ -1,37 +1,6 @@
 import Image from "next/image";
-const projects = [
-  {
-    img: "sama.jpeg",
-    title: "كتابة محتوى حساب سما",
-    description: `دايم نظرتك فوق… حيث يولد الحلم ويكبر الطموح ✨🕊️ كاتبة محتوى أؤمن أن الكلمة تُلهم وتصنع فرقًا 🌍`,
-    start_d: "08/2025",
-    end_d: "اليوم ",
-    link: "https://x.com/sama_a2030?s=11",
-  },
-  {
-    img: "inst.png",
-    title: "عيناي",
-    description: `
-    مشروع وطني طور محليا؛ لاستخدام تقنيات الذكاء
-الاصطناعي في التشخيص المبكر لاعتلال الشبكية
-السكري؛ للوقایة من العمی.
-    `,
-    start_d: "24/2/2025 ",
-    end_d: "9/9/2025  ",
-    link: "https://x.com/eyen_ai?s=11",
-  },
-  {
-    img: "coffee.jpeg",
-    title: "يوم القهوة العالمي",
-    description: `
-    اللي ما يعرفك ما يثمنك… إلا القهوة، تعرفك من أول رشفة.
+import projects_data from '../data/projects.json'
 
-    `,
-    start_d: "10/2025 ",
-    end_d: "اليوم  ",
-    link: "https://x.com/sama_a2030/status/1973655880165105874?s=12",
-  },
-];
 export default function Projects() {
   return (
     <div
@@ -46,20 +15,20 @@ export default function Projects() {
                 w-full  my-5
               `}
       >
-        {projects.map((p, idx) => (
+        {projects_data.map((p, idx) => (
           <div
             key={idx}
             className={`w-[300px] p-5 rounded-xl h-[530px] bg-[#cdccca40]`}
           >
-            <div className={`h-68 w-full rounded-lg relative overflow-hidden`}>
+            <div className={`h-68 w-full rounded-lg relative overflow-hidden bg-white`}>
               <Image
                 src={`/${p.img}`}
                 alt={`${p.title}`}
                 fill
-                className={`object-cover`}
+                  className={idx !== projects_data.length - 1 ? "object-cover" : ""}
               />
             </div>
-            <h2 className={`text-lg font-bold leading-12 mb-2`}>{p.title}</h2>
+            <h2 className={`text-lg font-bold leading-8 mb-2`}>{p.title}</h2>
             <p>{p.description}</p>
             <span className="flex items-center gap-5 my-3">
               <span>{p.start_d}</span>
