@@ -3,7 +3,7 @@ import projects_data from '../data/projects.json'
 
 export default function Projects() {
   return (
-    <div
+    <div 
       className={`bg-gray-100 py-10  md:px-5
               `}
     >
